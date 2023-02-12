@@ -1,0 +1,84 @@
+Hill:
+
+
+<Hill@BoxLayout>:
+    orintation: 'horizontal'
+    canvas.before:
+        Color:
+            rgba: (1, 1, 1, 1)
+        Rectangle:
+            size:self.size
+            pos: self.pos
+    spacing: "10dp"
+    BoxLayout:
+        orientation: 'vertical'
+        spacing: "10dp"
+        TextInput:
+            id: message_non_chiffre
+            size_hint_y : None
+            height : "80dp"
+        GridLayout:
+            rows: 2
+            size_hint_y: None
+            height: "100dp"
+            size_hint_x: None
+            width: "100dp"
+            spacing:"20dp"
+            TextInput:
+                id: c_a
+            TextInput:
+                id: c_b
+            TextInput:
+                id: c_c
+            TextInput:
+                id: c_d
+
+        Button:
+            size_hint_x: None
+            width: "70dp"
+            size_hint_y: None
+            height: "40dp"
+            text:"chiffre"
+            on_press : root.chiffre()
+        Label:
+            text: str(root.messageChiffre)
+            color: (1, .1, .1, 1)
+    BoxLayout:
+        canvas.before:
+            Color:
+                rgba: (1, .2, 1, 0)
+            Rectangle:
+                size: self.size
+                pos: self.pos
+        orientation: 'vertical'
+        spacing: "10dp"
+        TextInput:
+            id: message_chiffre
+            size_hint_y : None
+            height : "80dp"
+        GridLayout:
+            rows: 2
+            size_hint_y: None
+            height: "100dp"
+            size_hint_x: None
+            width: "100dp"
+            spacing:"20dp"
+            TextInput:
+                id: a
+            TextInput:
+                id: b
+            TextInput:
+                id: c
+            TextInput:
+                id: d
+        BoxLayout:
+            Button:
+                size_hint_x: None
+                width: "70dp"
+                size_hint_y: None
+                height: "40dp"
+                text:"dechiffre"
+        TextInput:
+            id : Message_dechiffre
+            size_hint_y : None
+            height : "80dp"

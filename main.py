@@ -25,6 +25,7 @@ class Hill(BoxLayout):
 
         _message = self.ids.message_non_chiffre.text
         # _message_chiffre = self.ids.Message_chiffre
+        _message=_message.lower()#puisque ta liste est en minuscule et aussi le dictionnaire.
 
         phras = _message
         phrase = phras.split(" ")
